@@ -7,11 +7,39 @@
 
     <script>
         $(document).ready(function() {
+            var viewModel = {
+                name: ko.observable("gundars"),
+                changeName: function() {
+                    this.name("celitans");
+                },
+                nameVisible: ko.observable(true)
+
+            };
+
+            ko.applyBindings(viewModel);
 
         });
     </script>
 </head>
-	
+
 <body>
-<div id="stamo"></div>
+
+    <div id="mainContainer">
+        <div id="nameContainer">
+            <label for="name">Name:</label>
+            <input id="name" type="text" data-bind="value: name, valueUpdate: 'afterkeydown'">
+        </div>
+
+        <div id="nameVisibleContainer">
+            <label for="nameVisibleId">Show name:</label>
+            <input type="checkbox" id="nameVisibleId" data-bind="checked: nameVisible">
+        </div>
+
+        <p>
+            Hello, <span id="nameShower" data-bind="text: name, visible: nameVisible"></span>
+        </p>
+
+        <input type="button" id="buttonChangeName" value="Change name" data-bind="click: changeName">
+    </div>
+</body>
 </html>
