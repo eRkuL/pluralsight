@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+<head>
+    <script>
+        var store = (function() {
+            var studentsNamesAndAge = {
+                stamo: 22,
+                todor: 21,
+                ivo: 24
+            };
+
+            var getAge = function(studentName) {
+                return studentsNamesAndAge[studentName];
+            };
+
+            return {
+                getAge: getAge
+            };
+        })();
+
+
+        console.log(store.getAge("stamo"));
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
