@@ -7,5 +7,9 @@ function printNumber(number) {
         return 2;
     }
 
+    if (number === 3) {
+        return 3;
+    }
+
     return 10;
 }
