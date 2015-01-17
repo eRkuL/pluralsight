@@ -4,5 +4,6 @@ test("print number with 1", function() {
 });
 
 test("print number with 10", function() {
-    equal(10, printNumber(10));
+
+    equal(9, printNumber(10));
 });

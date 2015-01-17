@@ -1,4 +1,5 @@
 function printNumber(number) {
+    "use strict";
     if (number === 1) {
         return 1;
     }
